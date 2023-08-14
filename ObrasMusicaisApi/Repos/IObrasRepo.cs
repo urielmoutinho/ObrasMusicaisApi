@@ -1,17 +1,18 @@
 ﻿using ObrasMusicaisApi.Controllers;
+using ObrasMusicaisApi.Models;
 
 namespace ObrasMusicaisApi.Repos
 {
     public interface IObrasRepo
     {
-        Task<IEnumerable<ObrasController> GetAllAsync();
+        Task<IEnumerable<ObraModel>> GetAllAsync();
 
-        Task<ObrasController?> GetAsync(Guid id);
+        Task<ObraModel> GetAsync(Guid id);
 
-        Task<ObrasController> AddAsync(Obra obra);
+        Task<ObraModel> AddAsync(ObraModel obra);
 
-        Task<ObrasController?> UpdateAsync(Obra obra);
+        Task<ObraModel> UpdateAsync(ObraModel obra);
 
-        Task<ObrasController?> DeleteAsync(Guid id);
+        Task<ObraModel> DeleteAsync(Guid id);
     }
 }
